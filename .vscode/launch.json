@@ -2,7 +2,52 @@
   "version": "0.2.0",
   "configurations": [
     {
-     "name": "Attach to Python Functions",
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "bertelsmann-docs:getNote/__init__.dumps (python3.8)",
+      "invokeTarget": {
+        "target": "code",
+        "projectRoot": "${workspaceFolder}/",
+        "lambdaHandler": "getNote/__init__.dumps"
+      },
+      "lambda": {
+        "runtime": "python3.8",
+        "payload": {},
+        "environmentVariables": {}
+      }
+    },
+    {
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "bertelsmann-docs:getNote/__init__.main (python3.8)",
+      "invokeTarget": {
+        "target": "code",
+        "projectRoot": "${workspaceFolder}/",
+        "lambdaHandler": "getNote/__init__.main"
+      },
+      "lambda": {
+        "runtime": "python3.8",
+        "payload": {},
+        "environmentVariables": {}
+      }
+    },
+    {
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "bertelsmann-docs:getNotes/__init__.main (python3.8)",
+      "invokeTarget": {
+        "target": "code",
+        "projectRoot": "${workspaceFolder}/",
+        "lambdaHandler": "getNotes/__init__.main"
+      },
+      "lambda": {
+        "runtime": "python3.8",
+        "payload": {},
+        "environmentVariables": {}
+      }
+    },
+    {
+      "name": "Attach to Python Functions",
       "type": "python",
       "request": "attach",
       "port": 9091,
